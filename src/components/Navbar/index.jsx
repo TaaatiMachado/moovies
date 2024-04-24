@@ -10,15 +10,14 @@ const NavBar = () => {
 
     const handleSearch = (movies) => {
       setSearchResults(movies);
-      // Redirecionar para a página de busca com os resultados da pesquisa na URL
       navigate('/search', { state: { movies } });
     };
-    
+    console.log(searchResults)
     return (
-        <div className='d-flex align-items-center justify-content-between'>
-            <nav >
+        <div className='d-flex align-items-center justify-content-between position-absolute z-3 w-100 mw-100 p-4 '>
+            <nav>
                 <NavItem to="/">
-                    <Logo />
+                    <Logo/>
                 </NavItem>
             </nav>
             <Input onSearch={handleSearch}/>
