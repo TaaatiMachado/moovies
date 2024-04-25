@@ -15,7 +15,8 @@ const SearchInput = ({ onSearch }) => {
     if (query.trim() !== '') {
       const movies = await searchMovies(query);
       onSearch(movies);
-      setQuery('')
+      setQuery('');
+
     }
   };
 

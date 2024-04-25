@@ -1,10 +1,29 @@
 .info{
     background: rgb(21,21,21);
     background: linear-gradient(90deg, rgba(21,21,21,1) 9%, rgba(36,36,36,0.8363678234965861) 52%, rgba(0,0,111,0) 100%); 
-    max-width: 500px
+    max-width: 500px;
+    padding-top: 100px
 }
  .thumbs::-webkit-scrollbar {
     height: 0;
   }
+
+  .thumbs{
+    margin-bottom: 10px
+  }
   
+  .thumbs_icon {
+    min-height: 80px; 
+    min-width: 70px;
+    max-height: 100px;
+  }
+
+  @media (min-width: 1480px) {
+    .thumbs_icon {
+      min-height: 60px; 
+      min-width: 50px;
+      max-height: 100px;
+    }
+  }
+
 

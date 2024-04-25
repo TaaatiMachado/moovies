@@ -8,20 +8,13 @@ const options = {
   }
 };
 
-export const searchMovies = async (query) => {
+export const searchMovies = async (query, page = 1) => {
   try {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`
-    );
-
-    if (!response.ok) {
-      throw new Error('Falha ao buscar filmes');
-    }
-
+    const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}&page=${page}`);
     const data = await response.json();
     return data.results;
   } catch (error) {
-    console.error('Erro ao buscar filmes:', error);
+    console.error('Erro na busca:', error);
     return [];
   }
 };
