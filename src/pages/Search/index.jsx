@@ -29,8 +29,8 @@ const SearchPage = () => {
   return (
     <>
       <div className={`w-100 d-block p-5 bg-black bg-gradient`}></div>
-      <div className="container bg-dark p-3">
-        <h3 className='text-white my-4 text-start'>Search results</h3>
+      <div className="container bg-dark py-5">
+        <h3 className='text-white my-4 text-start'>Search results:</h3>
         <div className="row d-flex flex-wrap">
           {searchResults.map((movie, index) => (
             <div key={index} className="col-md-3 mb-3">

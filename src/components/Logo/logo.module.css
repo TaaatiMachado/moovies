@@ -1,7 +1,24 @@
 .logo{
-    max-width: 250px;
+    max-width: 70px;
+    width: 18%;
 }
 .text{
     font-family: 'Jost';
     font-size: 50px;
+    
+}
+@media (min-width: 576px) {
+    .logo{
+        width: 13%;
+        max-width: 70px;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo{
+        width: 14%;
+        min-width: 80px;
+
+    }
+
 }

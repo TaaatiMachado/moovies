@@ -37,13 +37,13 @@ const HomePage = () => {
 
     //console.log(trendingMovies);
     return (
-        <div className="">
+        <div className="mw-100 d-flex" >
             <div id="carouselControls" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     {trendingMovies.map((movie, index) => (
                         <div key={movie.id} className={`carousel-item ${index === currentSlide ? 'active' : ''}`}>
 
-                            <div className={`d-inline-block w-50 ${styles.info} text-white align-top p-5 position-absolute`}>
+                            <div className={`d-inline-block w-100 ${styles.info} text-white align-top p-5 position-absolute text-start vh-100 vw-100`}>
                                 <h5 className='fs-1 text-left py-5 mt-5 mb-0 pb-3'>{movie.title}</h5>
                                 <p>Release: {movie.release_date.split('-')[0]}</p>
                                 <div className='d-flex align-baseline'>
@@ -56,26 +56,19 @@ const HomePage = () => {
                                 <p>Genres: {renderGenres(movie.genre_ids, genres)}</p>
 
                             </div>
-                            <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} className={`d-inline-block w-100 object-fit-cover ${styles.imgPoster}`} alt={movie.title} />
+                            <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} className="d-inline-block w-100 object-fit-cover h-100 min-vh-100" alt={movie.title} />
                         </div>
                     ))}
                 </div>
-                {/*<button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>*/}
             </div>
-            <div className={`row mt-3 mw-10 ${styles.thumbnail} position-absolute bottom-0 mx-0`}>
+            <div className={`row mt-3 mw-100 w-100 position-absolute bottom-0 mx-0 d-flex justify-content-xl-center align-center overflow-x-scroll flex-nowrap ${styles.thumbs}`}>
                 {trendingMovies.map((movie, index) => (
-                    <div key={movie.id} className="col mh-75">
+                    <div key={movie.id} className="col mh-75 mw-25">
                         <img
                             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                             alt={movie.title}
                             className={`img-thumbnail ${index === currentSlide ? 'active' : ''} `}
+                            style={{minHeight: 40, minWidth: 40, maxHeight: 80}}
                             onClick={() => handleThumbnailClick(index)}
                         />
                     </div>

@@ -1,9 +1,4 @@
 .btn{
-    position: absolute;
-    right: 32px;
+    right: 7px;
     width: 43px;
-}
-
-form .focus-ring:focus-visible{
-    outline: 0 !important;    
 }

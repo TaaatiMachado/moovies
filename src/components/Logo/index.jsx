@@ -3,7 +3,9 @@ import logo from '../../assets/logo.png'
 
 const Logo = () => {
     return (
-        <h1 className={`${styles.text} text-start text-white mb-0`}>M<img src={logo} className={`${styles.logo} w-25 align-top p-0`}/>VIES</h1>
+        <h1 className={`${styles.text} text-center text-sm-start text-white mb-0 d-flex align-center justify-content-center justify-content-md-start `}>
+            M<img src={logo} className={`${styles.logo} align-top p-0 img-fluid object-fit-contain`}/>
+            VIES</h1>
     )
 }
 
